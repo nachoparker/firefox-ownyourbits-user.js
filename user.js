@@ -66,7 +66,7 @@ user_pref("_user.js.parrot", "0100 syntax error: the parrot's dead!");
 user_pref("browser.shell.checkDefaultBrowser", false);
 /* 0102: set START page (0=blank, 1=home, 2=last visited page, 3=resume previous session)
  * [SETTING] General>Startup>When Firefox starts ***/
-user_pref("browser.startup.page", 0);
+user_pref("browser.startup.page", 3);
 /* 0103: set HOME+NEWWINDOW page
  * about:home=Activity Stream (default, see 0514), custom URL, about:blank
  * [SETTING] Home>New Windows and Tabs>Homepage and new windows ***/
@@ -438,9 +438,9 @@ user_pref("network.dns.disableIPv6", true);
  * [2] https://blog.scottlogic.com/2014/11/07/http-2-a-quick-look.html
  * [3] https://queue.acm.org/detail.cfm?id=2716278
  * [4] https://github.com/ghacksuserjs/ghacks-user.js/issues/107 ***/
-user_pref("network.http.spdy.enabled", false);
-user_pref("network.http.spdy.enabled.deps", false);
-user_pref("network.http.spdy.enabled.http2", false);
+// user_pref("network.http.spdy.enabled", false);
+// user_pref("network.http.spdy.enabled.deps", false);
+// user_pref("network.http.spdy.enabled.http2", false);
 /* 0703: disable HTTP Alternative Services (FF37+)
  * [1] https://www.ghacks.net/2015/08/18/a-comprehensive-list-of-firefox-privacy-and-security-settings/#comment-3970881
  * [2] https://www.mnot.net/blog/2016/03/09/alt-svc ***/
@@ -483,7 +483,7 @@ user_pref("network.file.disable_unc_paths", true); // (hidden pref)
 user_pref("_user.js.parrot", "0800 syntax error: the parrot's ceased to be!");
 /* 0801: disable location bar using search - PRIVACY
  * don't leak typos to a search engine, give an error message instead ***/
-user_pref("keyword.enabled", false);
+// user_pref("keyword.enabled", false);
 /* 0802: disable location bar domain guessing - PRIVACY/SECURITY
  * domain guessing intercepts DNS "hostname not found errors" and resends a
  * request (e.g. by adding www or .com). This is inconsistent use (e.g. FQDNs), does not work
@@ -522,17 +522,17 @@ user_pref("browser.urlbar.userMadeSearchSuggestionsChoice", true); // (FF41+)
 user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
 /* 0810: disable location bar making speculative connections (FF56+)
  * [1] https://bugzilla.mozilla.org/1348275 ***/
-user_pref("browser.urlbar.speculativeConnect.enabled", false);
+// user_pref("browser.urlbar.speculativeConnect.enabled", false);
 /* 0850a: disable location bar autocomplete and suggestion types
  * If you enforce any of the suggestion types, you MUST enforce 'autocomplete'
  *   - If *ALL* of the suggestion types are false, 'autocomplete' must also be false
  *   - If *ANY* of the suggestion types are true, 'autocomplete' must also be true
  * [SETTING] Privacy & Security>Address Bar>When using the address bar, suggest
  * [WARNING] If all three suggestion types are false, search engine keywords are disabled ***/
-user_pref("browser.urlbar.autocomplete.enabled", false);
-user_pref("browser.urlbar.suggest.history", false);
+// user_pref("browser.urlbar.autocomplete.enabled", false);
+// user_pref("browser.urlbar.suggest.history", false);
 user_pref("browser.urlbar.suggest.bookmark", false);
-user_pref("browser.urlbar.suggest.openpage", false);
+// user_pref("browser.urlbar.suggest.openpage", false);
 /* 0850c: disable location bar dropdown
  * This value controls the total number of entries to appear in the location bar dropdown
  * [NOTE] Items (bookmarks/history/openpages) with a high "frecency"/"bonus" will always
@@ -543,21 +543,21 @@ user_pref("browser.urlbar.suggest.openpage", false);
    // user_pref("browser.urlbar.maxRichResults", 0);
 /* 0850d: disable location bar autofill
  * [1] http://kb.mozillazine.org/Inline_autocomplete ***/
-user_pref("browser.urlbar.autoFill", false);
+// user_pref("browser.urlbar.autoFill", false);
 /* 0850e: disable location bar one-off searches (FF51+)
  * [1] https://www.ghacks.net/2016/08/09/firefox-one-off-searches-address-bar/ ***/
-user_pref("browser.urlbar.oneOffSearches", false);
+// user_pref("browser.urlbar.oneOffSearches", false);
 /* 0850f: disable location bar suggesting local search history (FF57+)
  * [1] https://bugzilla.mozilla.org/1181644 ***/
 user_pref("browser.urlbar.maxHistoricalSearchSuggestions", 0); // max. number of search suggestions
 /* 0860: disable search and form history
  * [SETTING] Privacy & Security>History>Custom Settings>Remember search and form history
  * [NOTE] You can clear formdata on exiting Firefox (see 2803) ***/
-user_pref("browser.formfill.enable", false);
+// user_pref("browser.formfill.enable", false);
 /* 0862: disable browsing and download history
  * [SETTING] Privacy & Security>History>Custom Settings>Remember my browsing and download history
  * [NOTE] You can clear history and downloads on exiting Firefox (see 2803) ***/
-   // user_pref("places.history.enabled", false);
+    // user_pref("places.history.enabled", false);
 /* 0870: disable Windows jumplist [WINDOWS] ***/
 user_pref("browser.taskbar.lists.enabled", false);
 user_pref("browser.taskbar.lists.frequent.enabled", false);
@@ -623,13 +623,13 @@ user_pref("network.auth.subresource-img-cross-origin-http-auth-allow", false);
 user_pref("_user.js.parrot", "1000 syntax error: the parrot's gone to meet 'is maker!");
 /** CACHE ***/
 /* 1001: disable disk cache ***/
-user_pref("browser.cache.disk.enable", false);
-user_pref("browser.cache.disk.capacity", 0);
-user_pref("browser.cache.disk.smart_size.enabled", false);
-user_pref("browser.cache.disk.smart_size.first_run", false);
+// user_pref("browser.cache.disk.enable", false);
+// user_pref("browser.cache.disk.capacity", 0);
+// user_pref("browser.cache.disk.smart_size.enabled", false);
+// user_pref("browser.cache.disk.smart_size.first_run", false);
 /* 1002: disable disk cache for SSL pages
  * [1] http://kb.mozillazine.org/Browser.cache.disk_cache_ssl ***/
-user_pref("browser.cache.disk_cache_ssl", false);
+// user_pref("browser.cache.disk_cache_ssl", false);
 /* 1003: disable memory cache
  * [NOTE] Not recommended due to performance issues ***/
    // user_pref("browser.cache.memory.enable", false);
@@ -640,7 +640,7 @@ user_pref("browser.cache.disk_cache_ssl", false);
  * 0=none, -1=auto (that's minus 1), or for other values see [1]
  * [NOTE] Not recommended unless you know what you're doing
  * [1] http://kb.mozillazine.org/Browser.sessionhistory.max_total_viewers ***/
-   // user_pref("browser.sessionhistory.max_total_viewers", 0);
+   user_pref("browser.sessionhistory.max_total_viewers", -1);
 /* 1006: disable permissions manager from writing to disk [RESTART]
  * [NOTE] This means any permission changes are session only
  * [1] https://bugzilla.mozilla.org/967812 ***/
@@ -652,15 +652,15 @@ user_pref("browser.cache.disk_cache_ssl", false);
 /* 1020: disable the Session Restore service completely
  * [WARNING] [SETUP] This also disables the "Recently Closed Tabs" feature
  * It does not affect "Recently Closed Windows" or any history. ***/
-user_pref("browser.sessionstore.max_tabs_undo", 0);
-user_pref("browser.sessionstore.max_windows_undo", 0);
+// user_pref("browser.sessionstore.max_tabs_undo", 0);
+// user_pref("browser.sessionstore.max_windows_undo", 0);
 /* 1021: disable storing extra session data
  * extra session data contains contents of forms, scrollbar positions, cookies and POST data
  * define on which sites to save extra session data:
  * 0=everywhere, 1=unencrypted sites, 2=nowhere ***/
-user_pref("browser.sessionstore.privacy_level", 2);
+user_pref("browser.sessionstore.privacy_level", 0);
 /* 1022: disable resuming session from crash [SETUP] ***/
-user_pref("browser.sessionstore.resume_from_crash", false);
+// user_pref("browser.sessionstore.resume_from_crash", false);
 /* 1023: set the minimum interval between session save operations - increasing it
  * can help on older machines and some websites, as well as reducing writes, see [1]
  * Default is 15000 (15 secs). Try 30000 (30sec), 60000 (1min) etc
@@ -674,7 +674,7 @@ user_pref("browser.sessionstore.interval", 30000);
  * URL shortcuts use a cached randomly named .ico file which is stored in your
  * profile/shortcutCache directory. The .ico remains after the shortcut is deleted.
  * If set to false then the shortcuts use a generic Firefox icon ***/
-user_pref("browser.shell.shortcutFavicons", false);
+// user_pref("browser.shell.shortcutFavicons", false);
 /* 1031: disable favicons in tabs and new bookmarks
  * bookmark favicons are stored as data blobs in places.sqlite>moz_favicons ***/
    // user_pref("browser.chrome.site_icons", false);
@@ -1188,10 +1188,10 @@ user_pref("media.navigator.enabled", false);
  * and parts of Quantum that utilize the GPU will also be affected as they are rolled out
  * [1] https://wiki.mozilla.org/Platform/GFX/HardwareAcceleration ***/
    // user_pref("gfx.direct2d.disabled", true); // [WINDOWS]
-user_pref("layers.acceleration.disabled", true);
+user_pref("layers.acceleration.disabled", false);
 /* 2510: disable Web Audio API (FF51+)
  * [1] https://bugzilla.mozilla.org/1288359 ***/
-user_pref("dom.webaudio.enabled", false);
+user_pref("dom.webaudio.enabled", true);
 /* 2516: disable PointerEvents
  * [1] https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent ***/
 user_pref("dom.w3c_pointer_events.enabled", false);
@@ -1283,7 +1283,7 @@ user_pref("pdfjs.disabled", false);
 user_pref("browser.download.folderList", 2);
 /* 2651: enforce user interaction for security by always asking the user where to download
  * [SETTING] General>Downloads>Always ask you where to save files ***/
-user_pref("browser.download.useDownloadDir", false);
+user_pref("browser.download.useDownloadDir", true);
 /* 2652: disable adding downloads to the system's "recent documents" list ***/
 user_pref("browser.download.manager.addToRecentDocs", false);
 /* 2653: disable hiding mime types (Options>General>Applications) not associated with a plugin ***/
@@ -1419,20 +1419,20 @@ user_pref("dom.caches.enabled", false);
 user_pref("_user.js.parrot", "2800 syntax error: the parrot's bleedin' demised!");
 /* 2802: enable Firefox to clear history items on shutdown
  * [SETTING] Privacy & Security>History>Clear history when Firefox closes ***/
-user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+user_pref("privacy.sanitize.sanitizeOnShutdown", false);
 /* 2803: set what history items to clear on shutdown
  * [SETTING] Privacy & Security>History>Clear history when Firefox closes>Settings
  * [NOTE] If 'history' is true, downloads will also be cleared regardless of the value
  * but if 'history' is false, downloads can still be cleared independently
  * However, this may not always be the case. The interface combines and syncs these
  * prefs when set from there, and the sanitize code may change at any time ***/
-user_pref("privacy.clearOnShutdown.cache", true);
-user_pref("privacy.clearOnShutdown.cookies", true);
-user_pref("privacy.clearOnShutdown.downloads", true); // see note above
-user_pref("privacy.clearOnShutdown.formdata", true); // Form & Search History
-user_pref("privacy.clearOnShutdown.history", true); // Browsing & Download History
-user_pref("privacy.clearOnShutdown.offlineApps", true); // Offline Website Data
-user_pref("privacy.clearOnShutdown.sessions", true); // Active Logins
+user_pref("privacy.clearOnShutdown.cache", false);
+user_pref("privacy.clearOnShutdown.cookies", false);
+user_pref("privacy.clearOnShutdown.downloads", false); // see note above
+user_pref("privacy.clearOnShutdown.formdata", false); // Form & Search History
+user_pref("privacy.clearOnShutdown.history", false); // Browsing & Download History
+user_pref("privacy.clearOnShutdown.offlineApps", false); // Offline Website Data
+user_pref("privacy.clearOnShutdown.sessions", false); // Active Logins
 user_pref("privacy.clearOnShutdown.siteSettings", false); // Site Preferences
 /* 2804: reset default history items to clear with Ctrl-Shift-Del (to match above)
  * This dialog can also be accessed from the menu History>Clear Recent History
@@ -1669,16 +1669,16 @@ user_pref("_user.js.parrot", "4700 syntax error: the parrot's taken 'is last bow
      Non-project related but useful. If any of these interest you, add them to your overrides ***/
 user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
 /* WELCOME & WHAT's NEW NOTICES ***/
-   // user_pref("browser.startup.homepage_override.mstone", "ignore"); // master switch
-   // user_pref("startup.homepage_welcome_url", "");
-   // user_pref("startup.homepage_welcome_url.additional", "");
-   // user_pref("startup.homepage_override_url", ""); // What's New page after updates
+   user_pref("browser.startup.homepage_override.mstone", "ignore"); // master switch
+   user_pref("startup.homepage_welcome_url", "");
+   user_pref("startup.homepage_welcome_url.additional", "");
+   user_pref("startup.homepage_override_url", ""); // What's New page after updates
 /* WARNINGS ***/
-   // user_pref("browser.tabs.warnOnClose", false);
-   // user_pref("browser.tabs.warnOnCloseOtherTabs", false);
-   // user_pref("browser.tabs.warnOnOpen", false);
-   // user_pref("full-screen-api.warning.delay", 0);
-   // user_pref("full-screen-api.warning.timeout", 0);
+   user_pref("browser.tabs.warnOnClose", false);
+   user_pref("browser.tabs.warnOnCloseOtherTabs", false);
+   user_pref("browser.tabs.warnOnOpen", false);
+   user_pref("full-screen-api.warning.delay", 0);
+   user_pref("full-screen-api.warning.timeout", 0);
 /* APPEARANCE ***/
    // user_pref("browser.download.autohideButton", false); // (FF57+)
    // user_pref("toolkit.cosmeticAnimations.enabled", false); // (FF55+)
@@ -1689,7 +1689,7 @@ user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
 /* UX BEHAVIOR ***/
    // user_pref("browser.backspace_action", 2); // 0=previous page, 1=scroll up, 2=do nothing
    // user_pref("browser.ctrlTab.previews", true);
-   // user_pref("browser.tabs.closeWindowWithLastTab", false);
+   user_pref("browser.tabs.closeWindowWithLastTab", false);
    // user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab (FF57+)
    // user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061 (FF53+)
    // user_pref("general.autoScroll", false); // middle-click enabling auto-scrolling [WINDOWS] [MAC]
