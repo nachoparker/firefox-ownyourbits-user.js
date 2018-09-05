@@ -23,6 +23,8 @@ user_pref("browser.sessionstore.privacy_level", 0);
 user_pref("browser.sessionstore.resume_from_crash", true);
 user_pref("browser.shell.shortcutFavicons", true);
 user_pref("security.mixed_content.block_display_content", false);
+user_pref("plugin.state.java", 0);
+user_pref("media.autoplay.enabled", true);
 user_pref("layers.acceleration.disabled", false);
 user_pref("dom.webaudio.enabled", true);
 user_pref("browser.download.useDownloadDir", true);
