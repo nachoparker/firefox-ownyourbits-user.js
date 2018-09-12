@@ -1108,10 +1108,10 @@ user_pref("dom.webnotifications.serviceworker.enabled", false); // (FF44+)
  * web apps can receive messages pushed to them from a server, whether or
  * not the web app is in the foreground, or even currently loaded
  * [1] https://developer.mozilla.org/docs/Web/API/Push_API ***/
-user_pref("dom.push.enabled", false);
-user_pref("dom.push.connection.enabled", false);
-user_pref("dom.push.serverURL", "");
-user_pref("dom.push.userAgentID", "");
+// user_pref("dom.push.enabled", false);
+// user_pref("dom.push.connection.enabled", false);
+// user_pref("dom.push.serverURL", "");
+// user_pref("dom.push.userAgentID", "");
 
 /*** 2400: DOM (DOCUMENT OBJECT MODEL) & JAVASCRIPT ***/
 user_pref("_user.js.parrot", "2400 syntax error: the parrot's kicked the bucket!");
