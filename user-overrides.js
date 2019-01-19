@@ -1,15 +1,14 @@
 user_pref("browser.startup.page", 3);
-user_pref("extensions.blocklist.enabled", true);
+user_pref("permissions.default.geo", 2); // 0=always ask (default), 1=allow, 2=block
+user_pref("extensions.screenshots.upload-disabled", true); // [FF60+]
+user_pref("browser.onboarding.enabled", false);
 user_pref("browser.sessionhistory.max_total_viewers", -1);
 user_pref("browser.sessionstore.privacy_level", 0);
-user_pref("security.mixed_content.block_active_content", true);
+user_pref("security.tls.version.min", 3);
+user_pref("media.autoplay.default", 2);
 user_pref("layers.acceleration.disabled", false);
 user_pref("dom.webaudio.enabled", true);
 user_pref("browser.download.useDownloadDir", true);
-user_pref("extensions.webextensions.keepStorageOnUninstall", false);
-user_pref("extensions.webextensions.keepUuidOnUninstall", false);
-user_pref("security.data_uri.block_toplevel_data_uri_navigations", true);
-user_pref("browser.cache.offline.insecure.enable", false);
 user_pref("privacy.sanitize.sanitizeOnShutdown", false);
 user_pref("privacy.clearOnShutdown.cache", false);
 user_pref("privacy.clearOnShutdown.cookies", false);
