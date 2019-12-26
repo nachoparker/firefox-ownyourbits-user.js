@@ -5,6 +5,7 @@ user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
 user_pref("extensions.update.autoUpdateDefault", false);
 user_pref("extensions.getAddons.cache.enabled", false);
 user_pref("extensions.screenshots.upload-disabled", true); // [FF60+]
+user_pref("keyword.enabled", true);
 user_pref("browser.sessionstore.privacy_level", 0);
 user_pref("media.autoplay.default", 2);
 user_pref("dom.webnotifications.enabled", false); // [FF22+]

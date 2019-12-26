@@ -467,7 +467,7 @@ user_pref("_user.js.parrot", "0800 syntax error: the parrot's ceased to be!");
  * the dropdown will now auto-select it and you can then hit 'enter' and it will work
  * [SETUP-CHROME] If you don't, or rarely, type URLs, or you use a default search
  * engine that respects privacy, then you probably don't need this ***/
-user_pref("keyword.enabled", false);
+user_pref("keyword.enabled", true);
 /* 0802: disable location bar domain guessing
  * domain guessing intercepts DNS "hostname not found errors" and resends a
  * request (e.g. by adding www or .com). This is inconsistent use (e.g. FQDNs), does not work
